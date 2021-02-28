@@ -27,7 +27,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Zip the application files
-      run: Compress-Archive .\* myapp.zip
+      run: Compress-Archive .\* app.zip
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
@@ -35,4 +35,4 @@ jobs:
         app-name: 'flopsazure2'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_f4c7bba887d24c2aae632d0c84663db1 }}
-        package: '.\myapp.zip'
+        package: '.\app.zip'
