@@ -11,7 +11,7 @@ CORS(app)
 def index():
     # os.chdir(os.path.dirname(__file__))
     # print(os.getcwd())
-    return "Hello, World! -> " + os.getcwd() + "->" + str(os.path.exists('/home/site/wwwroot/flops')) + "->" + str(os.path.exists('/home/site/repository/'))
+    return "Hello, World from Atif! -> " + os.getcwd() + "->" + str(os.path.exists('/home/site/wwwroot/flops')) + "->" + str(os.path.exists('/home/site/repository/'))
 
 
 @app.route('/aircadia')
